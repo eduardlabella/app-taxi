@@ -33,3 +33,18 @@ variable "apim_name" {
   description = "Name of the apim"
   type        = string
 }
+
+variable "vnet_name" {
+  type        = string
+  description = "Name of VNET"
+}
+
+variable "snet1_name" {
+  type        = string
+  description = "Name of SNET1"
+}
+
+variable "snet2_name" {
+  type        = string
+  description = "Name of SNET2"
+}

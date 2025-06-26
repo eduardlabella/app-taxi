@@ -17,3 +17,8 @@ variable "container_names" {
   type        = list(string)
   description = "List of blob container names to create inside the Storage Account"
 }
+
+variable "allowed_subnet_ids" {
+  type    = list(string)
+  default = []
+}
