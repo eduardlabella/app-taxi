@@ -5,4 +5,5 @@
 /src/functions/host.json
 /src/tests/__pycache__
 /src/tests/.pytest_cache
+/.pytest_cache
 

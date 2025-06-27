@@ -1,6 +1,9 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import json
 from azure.functions import HttpRequest
-from src.functions.sessionstart import sessionstart
+from functions.sessionstart import sessionstart
 
 def test_sessionstart_success():
     payload = {
@@ -26,10 +29,10 @@ def test_sessionstart_success():
     assert "SessionStartedAt" in body
 
 def test_sessionstart_missing_fields():
-
+    
     payload = {
         "driverId": 45,
-        "city": "Madrid"
+        "city": "BCN"
     }
     req = HttpRequest(
         method='POST',
