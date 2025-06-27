@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - develop
+      - feature/fix_deploy
   pull_request:
     branches:
       - main
@@ -58,9 +59,9 @@ jobs:
           path: .
 
       - name: Login to Azure CLI
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS2 }}
 
       - name: Deploy Azure Function App
         run: |
