@@ -1,2 +1,9 @@
 /terraform/environments/dev/.terraform
 /terraform/environments/dev/.terraform.lock.hcl
+/src/functions/__pycache__
+/src/functions/local.settings.json
+/src/functions/host.json
+/src/tests/__pycache__
+/src/tests/.pytest_cache
+/.pytest_cache
+
