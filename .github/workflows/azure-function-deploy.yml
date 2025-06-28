@@ -3,14 +3,14 @@ name: Test and Deploy Azure Function
 
 on:
   push:
-    branches:
-      - main
-      - develop
-      - feature/fix_deploy
+    branches: [ main, develop ]
+    paths:
+      - src/functions/**
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [ main, develop ]
+    paths:
+      - src/functions/**
+
 
 jobs:
   build_and_test:
@@ -30,6 +30,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r src/functions/requirements.txt
           pip install pytest
+      
+      - name: Lint with PyLint
+        run: |
+          pylint src/
+        continue-on-error: true
 
       - name: Run tests
         run: |
