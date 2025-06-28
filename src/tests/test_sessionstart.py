@@ -12,7 +12,7 @@ os.environ["GETHOTSPOT_URL"] = "http://mock/gethotspot"
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from functions.sessionstart import sessionstart
+from functions.sessionstart import main
 
 ISO_REGEX = re.compile(
     r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?[+-]\d{2}:\d{2}$"
@@ -75,7 +75,7 @@ def test_sessionstart_response_shape(mock_get):
         headers={"Content-Type": "application/json"},
     )
 
-    resp = sessionstart(req)
+    resp = main(req)
     assert resp.status_code == 202
 
     result = json.loads(resp.get_body())

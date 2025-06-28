@@ -10,7 +10,7 @@ GETTARIFF_URL  = os.environ["GETTARIFF_URL"]
 GETHOTSPOT_URL  = os.environ["GETHOTSPOT_URL"]
 REQUIRED_FIELDS = {"driverId", "groupIdTariff", "groupIdHotspot", "city", "lat", "lon"}
 
-def sessionstart(req: func.HttpRequest) -> func.HttpResponse:
+def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("sessionstart invoked")
 
     try:
