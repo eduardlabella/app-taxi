@@ -27,7 +27,7 @@ def _default_group_by_hour(hour: int) -> str:
     return "g2" if hour >= 22 or hour < 6 else "g1"
 
 # EntryPoint
-def get_tariff(req: func.HttpRequest) -> func.HttpResponse:
+def main(req: func.HttpRequest) -> func.HttpResponse:
     """
     GET /external/v1/tariff          -> auto-select by time of day
     GET /external/v1/tariff?groupId=g2  -> force specific group

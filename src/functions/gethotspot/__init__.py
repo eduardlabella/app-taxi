@@ -48,7 +48,7 @@ def _latest_hotspot() -> Optional[dict]:
 
     return latest
 
-def get_hotspot(req: func.HttpRequest) -> func.HttpResponse:
+def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("get_hotspot invoked")
 
     group_id = req.params.get("groupId")

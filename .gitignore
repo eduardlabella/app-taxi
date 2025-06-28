@@ -6,4 +6,7 @@
 /src/tests/__pycache__
 /src/tests/.pytest_cache
 /.pytest_cache
+/src/functions/gethotspot/__pycache__
+/src/functions/gettariff/__pycache__
+/src/functions/sessionstart/__pycache__
 
