@@ -48,3 +48,8 @@ variable "snet2_name" {
   type        = string
   description = "Name of SNET2"
 }
+
+variable "publisher_email" {
+  type        = string
+  description = "Publisher email"
+}

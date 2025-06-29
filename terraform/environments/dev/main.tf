@@ -42,5 +42,6 @@ module "apim" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
   apim_name           = var.apim_name
+  publisher_email     = var.publisher_email
 
 }

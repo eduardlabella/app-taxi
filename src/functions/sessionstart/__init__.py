@@ -71,5 +71,5 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(
         json.dumps(response_data),
         mimetype="application/json",
-        status_code=202,
+        status_code=200,
     )
