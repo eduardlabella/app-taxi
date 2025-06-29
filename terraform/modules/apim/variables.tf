@@ -12,3 +12,8 @@ variable "apim_name" {
   type        = string
   description = "Name of APIM"
 }
+
+variable "publisher_email" {
+  type        = string
+  description = "Publisher email"
+}

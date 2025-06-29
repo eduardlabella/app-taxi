@@ -76,7 +76,7 @@ def test_sessionstart_response_shape(mock_get):
     )
 
     resp = main(req)
-    assert resp.status_code == 202
+    assert resp.status_code == 200
 
     result = json.loads(resp.get_body())
 

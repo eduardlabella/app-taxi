@@ -3,7 +3,8 @@ resource "azurerm_api_management" "apim" {
   location            = var.location
   resource_group_name = var.resource_group_name
   publisher_name      = "My Taxi company"
-  publisher_email     = "labellaeduard@gmail.com"
+  #TODO
+  publisher_email     = var.publisher_email
 
   sku_name = "Developer_1"
 }
